@@ -8,10 +8,21 @@ const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const booksRouter = require('./routes/books');
 
+const Handlebars = require('handlebars')
+const hbs = require('express-handlebars');
+const hbsHelper = require('handlebars-helpers')();
+
 const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
+app.engine('hbs',hbs({
+  extname:'hbs',
+  defaultLayout:'layout',
+  layoutsDir: path.join(__dirname,'views'),
+  partialsDir: path.join(__dirname,'views/partials'),
+  helpers: hbsHelper
+}));
 app.set('view engine', 'hbs');
 
 app.use(logger('dev'));
