@@ -6,13 +6,15 @@ Mục đích phục vụ quá trình học tập, cam kết không sử dụng v
 '''
 
 *Hướng dẫn sử dụng:*
-- Chuẩn bị các đường link dẫn đến sản phẩm trong file links.txt
-Link có dạng https://www.urbanoutfitters.com/shop/<ten-san-pham>
-Không cần các thành phần phụ phía sau.
+- Di chuyển đến thư mục crawler
+cd crawler
+
+- Chạy file extracter.py để tạo ra file links.txt gồm các url sản phẩm
+Mỗi url có dạng https://www.urbanoutfitters.com/shop/<ten-san-pham>
+python extracter.py
 
 - Chạy chương trình:
-cd crawler
-python crawler.py
+python crawler.py links.txt
 
 - Một file data.csv sẽ được tạo ra chứa các thông tin về sản phẩm.
 Các cột có nhiều giá trị như sizes, image_ids, ... thì các giá trị được phân tách bởi |
