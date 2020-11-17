@@ -9,6 +9,7 @@ const loginRouter = require('./routes/login');
 const registerRouter = require('./routes/register');
 const booksRouter = require('./routes/books');
 const shopsRouter = require('./routes/shop');
+const productsRouter = require('./routes/product');
 const aboutsRouter = require('./routes/about');
 const blogsRouter = require('./routes/blog');
 const contactsRouter = require('./routes/contact');
@@ -26,7 +27,15 @@ app.engine('hbs',hbs({
   defaultLayout:'layout',
   layoutsDir: path.join(__dirname,'views'),
   partialsDir: path.join(__dirname,'views/partials'),
-  helpers: hbsHelper
+  helpers: {
+    modifyIndex: function(indexNum){
+      return indexNum +1;
+    },
+    checkImageActive: function(indexNum){
+      if (indexNum+1>1)
+        return true;
+    }
+  }
 }));
 app.set('view engine', 'hbs');
 
@@ -41,6 +50,7 @@ app.use('/login', loginRouter);
 app.use('/register', registerRouter);
 app.use('/books', booksRouter);
 app.use('/shop', shopsRouter);
+app.use('/product', productsRouter);
 app.use('/about', aboutsRouter);
 app.use('/blog', blogsRouter);
 app.use('/contact', contactsRouter);
