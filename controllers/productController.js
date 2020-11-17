@@ -6,7 +6,7 @@ exports.index = async (req,res,next) =>{
     const products = productModel.list();
 
     // Pass data to view to display list of product
-    res.render('shop/shop', {listProduct: products});
+    res.render('shop/shop', {listProduct: products, active: {Shop:true}});
 };
 
 function getRndInteger(min, max) {
@@ -31,6 +31,7 @@ exports.getProductById = async (req,res,next) =>{
     //pass data to view
     res.render('product/product-details', {
         resultProduct: dataProduct,
-        resultRelated: relatedProducts
+        resultRelated: relatedProducts,
+        active:{Shop:true}
     });
 };
