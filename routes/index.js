@@ -1,15 +1,9 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { active: {Home: true} });
-});
-
-router.post('/', (req, res)=> {
-  const number = req.body.number;
-  const result = Math.pow(parseFloat(number),2);
-  res.render('index', { title: 'Express', number, result });
+  res.render('./index/index', { active: {Home: true} });
 });
 
 module.exports = router;

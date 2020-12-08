@@ -1,4 +1,4 @@
-exports.list = () =>{
+exports.list = () => {
   return [
     {
       "id": "57328817_001",
