@@ -3,6 +3,8 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 
 const indexRouter = require('./routes/index');
 const loginRouter = require('./routes/login');
@@ -19,6 +21,8 @@ const hbs = require('express-handlebars');
 const hbsHelper = require('handlebars-helpers')();
 
 const app = express();
+
+app.use(bodyParser.urlencoded({ limit: '10mb', extended: false}));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -38,6 +42,17 @@ app.engine('hbs', hbs({
   }
 }));
 app.set('view engine', 'hbs');
+
+mongoose.connect(process.env.DATABASE_URL, {useNewUrlParser: true});
+const db = mongoose.connection;
+//We enebled the Listener
+db.on('error', () => {
+  console.error('Error occured in db connection');
+});
+
+db.once('open', () => {
+  console.log('DB Connection established successfully');
+});
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -70,5 +85,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('./error/error');
 });
+
 
 module.exports = app;
