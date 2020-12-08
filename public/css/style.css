@@ -3853,3 +3853,146 @@ ol {
 		height: 250px;
 	}
 }
+
+.total_rate .box_total {
+	background: #e8f0f2;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+  }
+  .total_rate .box_total h4 {
+	font-size: 48px;
+	font-weight: bold;
+	color: #ffa500;
+  }
+  .total_rate .box_total h5 {
+	color: #222222;
+	margin-bottom: 0px;
+	font-size: 24px;
+  }
+  .total_rate .box_total h6 {
+	color: #222222;
+	margin-bottom: 0px;
+	font-size: 14px;
+	color: #777777;
+	font-weight: normal;
+  }
+  .total_rate .rating_list {
+	margin-bottom: 30px;
+  }
+  .total_rate .rating_list h3 {
+	font-size: 18px;
+	color: #222222;
+	font-family: "Roboto", sans-serif;
+	font-weight: 500;
+	margin-bottom: 10px;
+  }
+  .total_rate .rating_list .list li a {
+	font-size: 14px;
+	color: #777777;
+  }
+  .total_rate .rating_list .list li a i {
+	color: #fbd600;
+  }
+  .total_rate .rating_list .list li:nth-child a i:last-child {
+	color: #eeeeee;
+  }
+  
+  .review_item {
+	margin-bottom: 15px;
+  }
+  .review_item:last-child {
+	margin-bottom: 0px;
+  }
+  .review_item .media {
+	position: relative;
+  }
+  .review_item .media .d-flex {
+	padding-right: 15px;
+  }
+  .review_item .media .media-body {
+	vertical-align: middle;
+	align-self: center;
+  }
+  .review_item .media .media-body h4 {
+	margin-bottom: 0px;
+	font-size: 14px;
+	color: #222222;
+	font-family: "Roboto", sans-serif;
+	margin-bottom: 8px;
+  }
+  .review_item .media .media-body i {
+	color: #fbd600;
+  }
+  .review_item .media .media-body h5 {
+	font-size: 13px;
+	font-weight: normal;
+	color: #777777;
+  }
+  .review_item .media .media-body .reply_btn {
+	border: 1px solid #e0e0e0;
+	padding: 0px 28px;
+	display: inline-block;
+	line-height: 32px;
+	border-radius: 16px;
+	font-size: 14px;
+	font-family: "Roboto", sans-serif;
+	color: #222222;
+	position: absolute;
+	right: 0px;
+	top: 14px;
+  @icnlude transition;
+  }
+  .review_item .media .media-body .reply_btn:hover {
+	background: #ffba00;
+	border-color: #ffba00;
+	color: #fff;
+  }
+  .review_item p {
+	padding-top: 10px;
+	margin-bottom: 0px;
+  }
+  .review_item.reply {
+	padding-left: 28px;
+  }
+  
+  .review_box h4 {
+	font-size: 24px;
+	color: #222222;
+	margin-bottom: 20px;
+  }
+  .review_box p {
+	margin-bottom: 0px;
+	display: inline-block;
+  }
+  .review_box .list {
+	display: inline-block;
+	padding-left: 10px;
+	padding-right: 10px;
+  }
+  .review_box .list li {
+	display: inline-block;
+  }
+  .review_box .list li a {
+	display: inline-block;
+	color: #fbd600;
+  }
+  .review_box .contact_form {
+	margin-top: 15px;
+  }
+  .review_box .primary-btn {
+	line-height: 38px !important;
+	padding: 0px 38px;
+	text-transform: uppercase;
+	margin-right: 10px;
+	border-radius: 5px;
+	border: none;
+  }
+  
+  .contact_form .form-group textarea {
+	height: 150px;
+  }
+  
+  .review__last__option {
+	padding-top: 15px;
+  }
