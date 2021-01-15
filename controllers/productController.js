@@ -29,16 +29,12 @@ exports.getProductById = async (req, res, next) =>{
 
         const relatedProducts = products.slice(randomNumber, randomNumber + 4);
         // pass data to view
-        if (dataProduct != undefined) {
-            res.render('./shop/product-details', {
-                resultProduct: dataProduct,
-                resultRelated: relatedProducts,
-                active: {Shop: true}
-            });
-        }
-        else {
-            console.error("Error: this product does not exist!");
-        }
+        res.render('./shop/product-details', {
+            resultProduct: dataProduct,
+            resultRelated: relatedProducts,
+            active: {Shop: true}
+        });
+
     } catch {
         console.error("Error load page!");
     }

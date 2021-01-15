@@ -42,8 +42,8 @@ app.engine('hbs', hbs({
   }
 }));
 app.set('view engine', 'hbs');
-
-mongoose.connect('mongodb://localhost/malefashion' || process.env.DATABASE_URL, {useNewUrlParser: true});
+//'mongodb://localhost/malefashion'
+mongoose.connect(process.env.DATABASE_URL || 'mongodb://localhost/malefashion', {useNewUrlParser: true});
 const db = mongoose.connection;
 //We enabled the Listener
 db.on('error', () => {
