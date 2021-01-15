@@ -20,6 +20,6 @@ const schema = new mongoose.Schema({
     url: String
 });
 
-const product = new mongoose.model('productModel', schema);
+const product = mongoose.model('products', schema);
 
 module.exports = product;

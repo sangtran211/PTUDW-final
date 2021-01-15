@@ -43,11 +43,11 @@ app.engine('hbs', hbs({
 }));
 app.set('view engine', 'hbs');
 
-mongoose.connect(process.env.DATABASE_URL, {useNewUrlParser: true});
+mongoose.connect('mongodb://localhost/malefashion' || process.env.DATABASE_URL, {useNewUrlParser: true});
 const db = mongoose.connection;
-//We enebled the Listener
+//We enabled the Listener
 db.on('error', () => {
-  console.error('Error occured in db connection');
+  console.error('Error occurred in db connection');
 });
 
 db.once('open', () => {
